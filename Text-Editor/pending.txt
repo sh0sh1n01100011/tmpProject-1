@@ -1,0 +1,14 @@
+# TODO:
+
+1. Upload project to the github account
+3. Configure github acount to follow and see all the branches updates of the project
+2. Solve all currently pending TODOs (as soon as possible)
+3. Create a properly organized file to schedule work on the project
+4. Create a proper REDME file
+5. Define what elements are being used and which are not being used (Once design is finished)
+6. Make sure to FOLLOW PEP guidelines in the project
+7. Format all .py files and use proper comment structure
+
+
+# First day of work on the project -> Aug 15, 2022
+# Second day of work on the project -> UNKONW (UPDATE)
