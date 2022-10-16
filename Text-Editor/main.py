@@ -97,7 +97,6 @@ class OPTIONS(Menu):
         """
         Menu.__init__(self, *args, **kwargs)
 
-        self.title = title
         # TODO Add the missing icons to all the commmand options that require it
         file_menu = Menu(self, tearoff=False)
         self.add_cascade(label="File", underline=0, menu=file_menu)
@@ -155,62 +154,40 @@ class OPTIONS(Menu):
         Comment:
         """
         sys.exit(0)
+        return
 
     def open_file(self):
         """
         Function:
         Param:
         """
-
-        file = filedialog.askopenfilename(defaultextension='.txt',
-                                  filetypes=[('All Files', '*.*'),
-                                             ("Text File", "*.txt*")])
-
-        # TODO: Make text_widget be passed on to this class along with the window
-        # title 'self.title = ...' in order to ive proper functionality and try to
-        # apply granulanity
-        if file != '':
-            self.title = (f'{os.path.basename(file)}')
-            text_widget.delete(1.0, END)
-            with open(file, mode='r', encoding='UTF-8') as base_file:
-                text_widget.insert(1.0, base_file.read())
-                base_file.close()
-                return
-
-        file = None
         return
 
+        #file = filedialog.askopenfilename(defaultextension='.txt',
+        #                          filetypes=[('All Files', '*.*'),
+        #                                     ("Text File", "*.txt*")])
+
+        #if file != '':
+        #    self.title = (f'{os.path.basename(file)}')
+        #    text_widget.delete(1.0, END)
+        #    with open(file, mode='r', encoding='UTF-8') as base_file:
+        #        text_widget.insert(1.0, base_file.read())
+        #        base_file.close()
+        #        return
+        #file = None
 
     def new_file(self):
-        """
-        Comment:
-        """
-        # TODO Fix the variable to allow the implementation of UTF-8 encoding support
-        #with open('Untitled', mode='r', encoding='utf8')
-        filename = 'Unititled - Text Editor'
-        #with open(filename, mode='r', encoding='UTF-8') as newFile:
-        self.title(f'filename')
-        text_widget.delete(1.0, END)
-        return text_widget.delete
+        #text_widget.delete(1.0, END)
+        #return text_widget.delete
+        return
 
-    # TODO get rid of the global variable ---> text_area
-    # TODO Practice the concepts of global variable and passing tkinter
-    #       elements into other functions, another alternative is to try
-    #       the encapsulation method, pass it around in order to practice
-    #       handlig 'text_area' as an object using it as a small class
     def save_file(self):
-        """
-        Comment:
-        """
-        # TODO get rid of the global variable ---> text_area
-
-
+        print("save file")
+        return
 
     def copy_text(self):
-        """
-        Comment:
-        """
         print("Copy Text")
+        return
 
     def cut_text(self):
         """
